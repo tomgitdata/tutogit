@@ -10,11 +10,11 @@ ahora el repo local sabe donde enviar cuando hagamos push o pull
 -ver todos los remotos:
 $git remote -v
 
-<<<<<<< HEAD
+
 -Si tienes más de un remoto, este comando los lista todos. Por ejemplo:
 =======
 Si tienes mÃ¡s de un remoto, este comando los lista todos. Por ejemplo:
->>>>>>> 5fad11ba3b0166e07256b5a49d30a8a069623aa5
+
 
 $ git remote -v
 bakkdoor  git://github.com/bakkdoor/grit.git
@@ -24,11 +24,11 @@ koke      git://github.com/koke/grit.git
 origin  https://github.com/tomgitdata/tutogit.git (fetch)
 origin  https://github.com/tomgitdata/tutogit.git (push)
 
-<<<<<<< HEAD
+
 -Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante fácil. Pero fíjate en que sólo el remoto origen tiene una URL SSL, por lo que es el único al que podemos enviar
 =======
 Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante fÃ¡cil. Pero fÃ­jate en que sÃ³lo el remoto origen tiene una URL SSL, por lo que es el Ãºnico al que podemos enviar
->>>>>>> 5fad11ba3b0166e07256b5a49d30a8a069623aa5
+
 
 -Mas informacion de un remoto:
 $git remote show <nombre>
@@ -37,7 +37,7 @@ $git remote show <nombre>
 -Si queremos borrar el direccionamiento a un repositorio remoto:
  $git remote delete <nombre>
 
-<<<<<<< HEAD
+
 -Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la información de Koke que todavía no tienes en tu repositorio, puedes ejecutar git fetch koke o el que qu:
 
 $ git fetch origin
