@@ -12,7 +12,7 @@ ahora el repo local sabe donde enviar cuando hagamos push o pull
 ver todos los remotos:
 $git remote -v
 
-Si tienes m·s de un remoto, este comando los lista todos. Por ejemplo:
+Si tienes m√°s de un remoto, este comando los lista todos. Por ejemplo:
 
 $ git remote -v
 bakkdoor  git://github.com/bakkdoor/grit.git
@@ -22,12 +22,14 @@ koke      git://github.com/koke/grit.git
 origin  https://github.com/tomgitdata/tutogit.git (fetch)
 origin  https://github.com/tomgitdata/tutogit.git (push)
 
-Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante f·cil. Pero fÌjate en que sÛlo el remoto origen tiene una URL SSL, por lo que es el ˙nico al que podemos enviar
+Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante f√°cil. Pero f√≠jate en que s√≥lo el remoto origen tiene una URL SSL, por lo que es el √∫nico al que podemos enviar
 
 Si queremos borrar el direccionamiento a un repositorio remoto:
  $git remote delete <nombre>
 
-Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la informaciÛn de Koke que todavÌa no tienes en tu repositorio, puedes ejecutar git fetch koke:
+Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la informaci√≥n de Koke que todav√≠a no tienes en tu repositorio, puedes ejecutar git fetch koke:
+
+*** a√±adido hoy
 
 
-Es importante tener en cuenta que el comando fetch sÛlo recupera la informaciÛn y la pone en tu repositorio local óno la une autom·ticamente con tu trabajo ni modifica aquello en lo que est·s trabajando. Tendr·s que unir ambos manualmente a posteriori.
+Es importante tener en cuenta que el comando fetch s√≥lo recupera la informaci√≥n y la pone en tu repositorio local ‚Äîno la une autom√°ticamente con tu trabajo ni modifica aquello en lo que est√°s trabajando. Tendr√°s que unir ambos manualmente a posteriori.
