@@ -1,8 +1,6 @@
 clonar el repositorio remoto (sera llamado origin, mientras que el local es siempre master:)
 $ git clone git://github.com/schacon/ticgit.git
 
-
-######
 -iniciamos un repositorio en remoto (github), con el boton http nos copiara la direccion del repositorio al portapapeles. 
 En nuestra terminal local y dentro de nuestr directorio de trabajo (hello-word) que inicializamos como repositorio git local, le indicamos a git la localizacion de la version remota. Normalmente se llamara origin.
 
@@ -12,7 +10,11 @@ ahora el repo local sabe donde enviar cuando hagamos push o pull
 -ver todos los remotos:
 $git remote -v
 
+<<<<<<< HEAD
 -Si tienes m·s de un remoto, este comando los lista todos. Por ejemplo:
+=======
+Si tienes m√°s de un remoto, este comando los lista todos. Por ejemplo:
+>>>>>>> 5fad11ba3b0166e07256b5a49d30a8a069623aa5
 
 $ git remote -v
 bakkdoor  git://github.com/bakkdoor/grit.git
@@ -22,7 +24,11 @@ koke      git://github.com/koke/grit.git
 origin  https://github.com/tomgitdata/tutogit.git (fetch)
 origin  https://github.com/tomgitdata/tutogit.git (push)
 
+<<<<<<< HEAD
 -Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante f·cil. Pero fÌjate en que sÛlo el remoto origen tiene una URL SSL, por lo que es el ˙nico al que podemos enviar
+=======
+Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante f√°cil. Pero f√≠jate en que s√≥lo el remoto origen tiene una URL SSL, por lo que es el √∫nico al que podemos enviar
+>>>>>>> 5fad11ba3b0166e07256b5a49d30a8a069623aa5
 
 -Mas informacion de un remoto:
 $git remote show <nombre>
@@ -31,6 +37,7 @@ $git remote show <nombre>
 -Si queremos borrar el direccionamiento a un repositorio remoto:
  $git remote delete <nombre>
 
+<<<<<<< HEAD
 -Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la informaciÛn de Koke que todavÌa no tienes en tu repositorio, puedes ejecutar git fetch koke o el que qu:
 
 $ git fetch origin
@@ -72,7 +79,13 @@ user: "Scott Chacon <schacon@gee-mail.com>"
 
 VER DATOS ETIQUETA
 $ git show <nombre_etiq>
-
+=======
+Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la informaci√≥n de Koke que todav√≠a no tienes en tu repositorio, puedes ejecutar git fetch koke:
 
 ETIQUETAS LIGERAS:
 Para crear una etiqueta ligera no aÒadas las opciones -a, -s o -m:
+=======
+
+Es importante tener en cuenta que el comando fetch solo recupera la informacion y la pone en tu repositorio local no la une automaticamente con tu trabajo ni modifica aquello en lo que estas trabajando. Tendras que unir ambos manualmente a posteriori (pull = fetch + commit)
+
+
