@@ -1,0 +1,5 @@
+https://git-scm.com/book/es/v1/Fundamentos-de-Git-Obteniendo-un-repositorio-Git
+http://rogerdudler.github.io/git-guide/index.es.html
+https://www.intertech.com/Blog/Introduction-to-Git-Concepts/
+http://jlord.us/git-it/
+http://gitimmersion.com/
