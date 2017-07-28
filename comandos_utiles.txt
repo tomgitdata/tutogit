@@ -11,9 +11,9 @@ ahora el repo local sabe donde enviar cuando hagamos push o pull
 $git remote -v
 
 
--Si tienes m·s de un remoto, este comando los lista todos. Por ejemplo:
+-Si tienes m√°s de un remoto, este comando los lista todos. Por ejemplo:
 =======
-Si tienes m√°s de un remoto, este comando los lista todos. Por ejemplo:
+Si tienes m√É¬°s de un remoto, este comando los lista todos. Por ejemplo:
 
 
 $ git remote -v
@@ -25,20 +25,18 @@ origin  https://github.com/tomgitdata/tutogit.git (fetch)
 origin  https://github.com/tomgitdata/tutogit.git (push)
 
 
--Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante f·cil. Pero fÌjate en que sÛlo el remoto origen tiene una URL SSL, por lo que es el ˙nico al que podemos enviar
-=======
-Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante f√°cil. Pero f√≠jate en que s√≥lo el remoto origen tiene una URL SSL, por lo que es el √∫nico al que podemos enviar
-
+-Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante f√°cil.
+Pero f√≠jate en que s√≥lo el remoto origen tiene una URL SSL, por lo que es el √∫nico al que podemos enviar
 
 -Mas informacion de un remoto:
 $git remote show <nombre>
 
-
 -Si queremos borrar el direccionamiento a un repositorio remoto:
  $git remote delete <nombre>
 
-
--Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la informaciÛn de Koke que todavÌa no tienes en tu repositorio, puedes ejecutar git fetch koke o el que qu:
+-Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL.
+Por ejemplo, si quieres recuperar toda la informacion de Koke que todav√≠a no tienes en tu repositorio, puedes ejecutar
+git fetch koke o el que que sea:
 
 $ git fetch origin
 remote: Counting objects: 3, done.
@@ -48,21 +46,25 @@ Unpacking objects: 100% (3/3), done.
 From https://github.com/tomgitdata/tutogit
    9b56299..5fad11b  master     -> origin/master
 
--Es importante tener en cuenta que el comando fetch sÛlo recupera la informaciÛn y la pone en tu repositorio local óno la une autom·ticamente con tu trabajo ni modifica aquello en lo que est·s trabajando. Tendr·s que unir ambos manualmente a posteriori.
+-Es importante tener en cuenta que el comando fetch s√≥lo recupera la informaci√≥n y la pone en tu repositorio local NO la une autom√°ticamente con tu trabajo ni modifica aquello en lo que est√°s trabajando. Tendr√°s que unir ambos manualmente a posteriori.
 
 
 
--Cuando tu proyecto se encuentra en un estado que quieres compartir, tienes que enviarlo a un repositorio remoto. El comando que te permite hacer esto es:
+-Cuando tu proyecto se encuentra en un estado que quieres compartir, tienes que enviarlo a un repositorio remoto.
+El comando que te permite hacer esto es:
 $git push [nombre-remoto][nombre-rama]
 
--Si quieres enviar tu rama maestra (master) a tu servidor origen (origin), ejecutarÌas esto para enviar tu trabajo al servidor:
+-Si quieres enviar tu rama maestra (master) a tu servidor origen (origin), ejecutar√≠as esto para enviar tu trabajo al servidor:
 $git push origin master
 
 
 
 ETIQUETAS
 
-Git usa dos tipos principales de etiquetas: ligeras y anotadas. Una etiqueta ligera es muy parecida a una rama que no cambia óun puntero a una confirmaciÛn especÌficaó. Sin embargo, las etiquetas anotadas son almacenadas como objetos completos en la base de datos de Git. Tienen suma de comprobaciÛn; contienen el nombre del etiquetador, correo electrÛnico y fecha; tienen mensaje de etiquetado; y pueden estar firmadas y verificadas con GNU Privacy Guard (GPG). 
+Git usa dos tipos principales de etiquetas: ligeras y anotadas. Una etiqueta ligera es muy parecida a una rama que no cambia
+‚Äîun puntero a una confirmaci√≥n espec√≠fica‚Äî. Sin embargo, las etiquetas anotadas son almacenadas como objetos completos en la base
+de datos de Git. Tienen suma de comprobaci√≥n; contienen el nombre del etiquetador, correo electr√≥nico y fecha; tienen mensaje de
+etiquetado; y pueden estar firmadas y verificadas con GNU Privacy Guard (GPG). 
 
 LISTA DE ETIQUETAS
 $ git tag
@@ -80,10 +82,12 @@ user: "Scott Chacon <schacon@gee-mail.com>"
 VER DATOS ETIQUETA
 $ git show <nombre_etiq>
 =======
-Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la informaci√≥n de Koke que todav√≠a no tienes en tu repositorio, puedes ejecutar git fetch koke:
+Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL.
+Por ejemplo, si quieres recuperar toda la informacion de Koke que todavia no tienes en tu repositorio, puedes ejecutar
+git fetch koke:
 
 ETIQUETAS LIGERAS:
-Para crear una etiqueta ligera no aÒadas las opciones -a, -s o -m:
+Para crear una etiqueta ligera no a√±adas las opciones -a, -s o -m:
 =======
 
 Es importante tener en cuenta que el comando fetch solo recupera la informacion y la pone en tu repositorio local no la une automaticamente con tu trabajo ni modifica aquello en lo que estas trabajando. Tendras que unir ambos manualmente a posteriori (pull = fetch + commit)
