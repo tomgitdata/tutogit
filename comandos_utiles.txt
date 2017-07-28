@@ -3,16 +3,16 @@ $ git clone git://github.com/schacon/ticgit.git
 
 
 ######
-iniciamos un repositorio en remoto (github), con el boton http nos copiara la direccion del repositorio al portapapeles. 
-En nuestra terminal local y dentro de nuestr directorio de trabajo (hello-word) que inicializamos como repositorio git, le indicamos a git la localizacion de la version remota. Normalmente se llamara origin.
+-iniciamos un repositorio en remoto (github), con el boton http nos copiara la direccion del repositorio al portapapeles. 
+En nuestra terminal local y dentro de nuestr directorio de trabajo (hello-word) que inicializamos como repositorio git local, le indicamos a git la localizacion de la version remota. Normalmente se llamara origin.
 
 $ git remote add <nombre|origin> <url|loquesalgadelpaste>
 ahora el repo local sabe donde enviar cuando hagamos push o pull
 
-ver todos los remotos:
+-ver todos los remotos:
 $git remote -v
 
-Si tienes más de un remoto, este comando los lista todos. Por ejemplo:
+-Si tienes más de un remoto, este comando los lista todos. Por ejemplo:
 
 $ git remote -v
 bakkdoor  git://github.com/bakkdoor/grit.git
@@ -22,12 +22,57 @@ koke      git://github.com/koke/grit.git
 origin  https://github.com/tomgitdata/tutogit.git (fetch)
 origin  https://github.com/tomgitdata/tutogit.git (push)
 
-Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante fácil. Pero fíjate en que sólo el remoto origen tiene una URL SSL, por lo que es el único al que podemos enviar
+-Esto significa que podemos recibir contribuciones de cualquiera de estos usuarios de manera bastante fácil. Pero fíjate en que sólo el remoto origen tiene una URL SSL, por lo que es el único al que podemos enviar
 
-Si queremos borrar el direccionamiento a un repositorio remoto:
+-Mas informacion de un remoto:
+$git remote show <nombre>
+
+
+-Si queremos borrar el direccionamiento a un repositorio remoto:
  $git remote delete <nombre>
 
-Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la información de Koke que todavía no tienes en tu repositorio, puedes ejecutar git fetch koke:
+-Para descargar la informacion de un repositorio remoto que no tengamos en el local podemos usar el nombre en vez de toda URL. Por ejemplo, si quieres recuperar toda la información de Koke que todavía no tienes en tu repositorio, puedes ejecutar git fetch koke o el que qu:
+
+$ git fetch origin
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/tomgitdata/tutogit
+   9b56299..5fad11b  master     -> origin/master
+
+-Es importante tener en cuenta que el comando fetch sólo recupera la información y la pone en tu repositorio local —no la une automáticamente con tu trabajo ni modifica aquello en lo que estás trabajando. Tendrás que unir ambos manualmente a posteriori.
 
 
-Es importante tener en cuenta que el comando fetch sólo recupera la información y la pone en tu repositorio local —no la une automáticamente con tu trabajo ni modifica aquello en lo que estás trabajando. Tendrás que unir ambos manualmente a posteriori.
+
+-Cuando tu proyecto se encuentra en un estado que quieres compartir, tienes que enviarlo a un repositorio remoto. El comando que te permite hacer esto es:
+$git push [nombre-remoto][nombre-rama]
+
+-Si quieres enviar tu rama maestra (master) a tu servidor origen (origin), ejecutarías esto para enviar tu trabajo al servidor:
+$git push origin master
+
+
+
+ETIQUETAS
+
+Git usa dos tipos principales de etiquetas: ligeras y anotadas. Una etiqueta ligera es muy parecida a una rama que no cambia —un puntero a una confirmación específica—. Sin embargo, las etiquetas anotadas son almacenadas como objetos completos en la base de datos de Git. Tienen suma de comprobación; contienen el nombre del etiquetador, correo electrónico y fecha; tienen mensaje de etiquetado; y pueden estar firmadas y verificadas con GNU Privacy Guard (GPG). 
+
+LISTA DE ETIQUETAS
+$ git tag
+$ git tag -l <string> : lista solo las etiquetas con <string>
+
+CREAR ETIQUETA ANOTADA:
+$ git tag -a <nombre_etiq> -m 'my version 1.4'
+
+CON CLAVE FIRMADA
+$ git tag -s v1.5 -m 'my signed 1.5 tag'
+You need a passphrase to unlock the secret key for
+user: "Scott Chacon <schacon@gee-mail.com>"
+1024-bit DSA key, ID F721C45A, created 2009-02-09
+
+VER DATOS ETIQUETA
+$ git show <nombre_etiq>
+
+
+ETIQUETAS LIGERAS:
+Para crear una etiqueta ligera no añadas las opciones -a, -s o -m:
